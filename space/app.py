@@ -271,4 +271,6 @@ with gr.Blocks(title="Albertina 1.5B — triagem de ouvidoria") as demo:
         )
 
 if __name__ == "__main__":
-    demo.launch(mcp_server=True)
+    # ssr_mode=False: o servidor SSR do Gradio responde 405 às chamadas de API
+    # e polui o log sem afetar o resultado.
+    demo.launch(mcp_server=True, ssr_mode=False)
