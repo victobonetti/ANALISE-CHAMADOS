@@ -1,6 +1,6 @@
-# transformers 5.x recusa checkpoints .bin sem safetensors; o Albertina só
-# publica pytorch_model.bin, então ficamos na série 4.x.
+# O Albertina só publica pytorch_model.bin, e transformers 5.x exige
+# safetensors — daí a série 4.x. Ela requer huggingface-hub<1.0, o que é
+# incompatível com gradio 6.x (>=1.16); por isso o SDK fica em 5.50.0.
 transformers>=4.57,<5
 sentencepiece
-protobuf
 accelerate
