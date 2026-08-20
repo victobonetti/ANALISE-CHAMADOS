@@ -1,0 +1,27 @@
+# Configuração de referência do fine-tuning.
+#
+# modelo_base: o padrão é o BERTimbau, que é o melhor custo/benefício para
+# começar — 110M parâmetros, treina em minutos numa GPU modesta e serve em CPU.
+# Alternativas, em ordem crescente de custo:
+#
+#   neuralmind/bert-base-portuguese-cased                 110M  — padrão
+#   PORTULAN/albertina-100m-portuguese-ptbr-encoder       100M
+#   PORTULAN/albertina-900m-portuguese-ptbr-encoder       900M  — precisa de GPU dedicada
+#   PORTULAN/albertina-1b5-portuguese-ptbr-encoder        1.5B  — só com A100/H100 e
+#     gradient checkpointing; ganho típico sobre o BERTimbau é de poucos pontos
+#     de macro-F1 e não compensa antes de o corpus passar de ~10 mil exemplos.
+modelo_base: neuralmind/bert-base-portuguese-cased
+
+corpus: data/manifestacoes.jsonl
+saida: artefatos/bertimbau-ouvidoria
+
+max_tokens: 512
+epocas: 4
+learning_rate: 2.0e-5
+batch_size: 16
+warmup_ratio: 0.1
+weight_decay: 0.01
+
+fracao_validacao: 0.15
+fracao_teste: 0.15
+semente: 13460

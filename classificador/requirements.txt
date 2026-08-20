@@ -1,0 +1,9 @@
+# transformers 5.x recusa checkpoints .bin sem safetensors, formato em que os
+# encoders Albertina são publicados.
+transformers>=4.57,<5
+torch>=2.4
+numpy
+pyyaml
+sentencepiece
+protobuf
+accelerate

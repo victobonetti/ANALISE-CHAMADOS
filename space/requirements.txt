@@ -1,0 +1,6 @@
+# transformers 5.x recusa checkpoints .bin sem safetensors; o Albertina só
+# publica pytorch_model.bin, então ficamos na série 4.x.
+transformers>=4.57,<5
+sentencepiece
+protobuf
+accelerate

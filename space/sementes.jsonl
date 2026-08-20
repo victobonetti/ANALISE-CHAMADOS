@@ -1,0 +1,40 @@
+{"texto": "Quero registrar meu agradecimento à equipe da UBS Jardim das Flores. Fui atendido no prazo, a enfermeira Marta explicou cada etapa do exame com muita paciência e o local estava impecável.", "rotulos": ["elogio"]}
+{"texto": "Parabenizo o servidor do setor de protocolo que me atendeu na sexta-feira. Mesmo faltando quinze minutos para o encerramento do expediente, ele resolveu minha pendência sem pressa.", "rotulos": ["elogio"]}
+{"texto": "O novo aplicativo de agendamento funcionou perfeitamente. Marquei a consulta em dois minutos pelo celular, sem precisar sair de casa. Excelente trabalho da equipe de tecnologia.", "rotulos": ["elogio"]}
+{"texto": "Gostaria de elogiar o atendimento telefônico da central. A atendente foi cordial, resolveu minha dúvida sobre o IPTU na mesma ligação e ainda confirmou meu e-mail para enviar o comprovante.", "rotulos": ["elogio"]}
+{"texto": "A reforma da praça do bairro Santo Antônio ficou excelente. Os brinquedos são seguros, a iluminação melhorou muito e minha família voltou a frequentar o espaço à noite.", "rotulos": ["elogio"]}
+{"texto": "Registro o excelente trabalho da equipe de vacinação que esteve na escola municipal. Foram organizados, atenciosos com as crianças e cumpriram todo o cronograma divulgado.", "rotulos": ["elogio"]}
+{"texto": "Fui muito bem recebido no CRAS. A assistente social ouviu meu caso com atenção e me orientou sobre benefícios que eu nem sabia que existiam. Faz diferença na vida de quem precisa.", "rotulos": ["elogio"]}
+{"texto": "O motorista da linha 042 merece reconhecimento. Esperou uma senhora idosa sentar antes de arrancar e ajudou um passageiro cadeirante a embarcar com toda a atenção.", "rotulos": ["elogio"]}
+{"texto": "Proponho que o portal de serviços passe a permitir o agendamento de segunda via de documentos aos sábados pela manhã, o que reduziria as filas durante a semana.", "rotulos": ["sugestao"]}
+{"texto": "Sugiro a instalação de um totem de autoatendimento no saguão da prefeitura para emissão de guias simples. Muita gente enfrenta fila apenas para imprimir um boleto.", "rotulos": ["sugestao"]}
+{"texto": "Seria útil que o site publicasse o tempo médio de espera de cada unidade de saúde em tempo real, para que o cidadão pudesse escolher a unidade menos congestionada.", "rotulos": ["sugestao"]}
+{"texto": "Uma ideia para melhorar o transporte público: criar uma faixa exclusiva de ônibus na Avenida Brasil no horário de pico, das 6h às 9h, como já existe em outras capitais.", "rotulos": ["sugestao"]}
+{"texto": "Recomendo que os formulários de cadastro sejam simplificados. Hoje são exigidos dados que a própria administração já possui em outros sistemas, o que só gera retrabalho.", "rotulos": ["sugestao"]}
+{"texto": "Proponho que a coleta seletiva seja ampliada para o período noturno nos bairros comerciais, já que durante o dia os caminhões disputam espaço com carga e descarga.", "rotulos": ["sugestao"]}
+{"texto": "Sugiro que o município disponibilize as atas das audiências públicas em formato aberto e pesquisável, e não em PDF digitalizado, o que dificulta a consulta pelo cidadão.", "rotulos": ["sugestao"]}
+{"texto": "Poderia ser criado um canal de WhatsApp para lembrar os pacientes das consultas agendadas. Isso reduziria bastante o número de faltas nas unidades de saúde.", "rotulos": ["sugestao"]}
+{"texto": "Estou há mais de três horas na fila do posto de saúde, com senha marcada para as 8h, e até agora ninguém foi chamado. Não há qualquer informação sobre o atraso.", "rotulos": ["reclamacao"]}
+{"texto": "O ônibus da linha 315 não passou no horário previsto pela terceira vez nesta semana. Cheguei atrasado ao trabalho e ninguém da empresa dá satisfação.", "rotulos": ["reclamacao"]}
+{"texto": "Fui destratado pelo atendente do guichê 4. Ele respondeu de forma ríspida às minhas perguntas e virou as costas antes de eu terminar de falar.", "rotulos": ["reclamacao"]}
+{"texto": "O site da prefeitura sai do ar toda vez que tento emitir a certidão negativa. Já tentei em três navegadores diferentes e o erro persiste há mais de duas semanas.", "rotulos": ["reclamacao"]}
+{"texto": "Meu protocolo foi aberto há sessenta dias e continua sem qualquer resposta, mesmo com o prazo legal vencido. Já liguei quatro vezes e só me pedem para aguardar.", "rotulos": ["reclamacao"]}
+{"texto": "A merenda servida na escola municipal veio estragada na última terça-feira. Meu filho passou mal e a direção se limitou a dizer que iria verificar.", "rotulos": ["reclamacao"]}
+{"texto": "O atendimento na central telefônica é péssimo. Fico mais de quarenta minutos aguardando e a ligação cai sempre que sou transferido para o setor responsável.", "rotulos": ["reclamacao"]}
+{"texto": "A rua está sem coleta de lixo há duas semanas e o mau cheiro já invadiu as casas. Reclamei na secretaria e disseram apenas que o caminhão está quebrado.", "rotulos": ["reclamacao", "solicitacao"]}
+{"texto": "Venho relatar que o fiscal responsável pela vistoria do meu estabelecimento exigiu pagamento em espécie para liberar o alvará, dizendo que sem isso o processo demoraria meses.", "rotulos": ["denuncia"]}
+{"texto": "Tenho conhecimento de que um servidor da secretaria de obras contrata a própria empresa da esposa para prestar serviços ao município, sem licitação e com notas superfaturadas.", "rotulos": ["denuncia"]}
+{"texto": "Comunico que servidores do setor batem o ponto uns pelos outros e passam a tarde fora da repartição, com a chefia ciente e sem tomar qualquer providência.", "rotulos": ["denuncia"]}
+{"texto": "Quero relatar que a empresa vencedora da licitação de merenda é de propriedade do cunhado do secretário, e que o pregão foi direcionado com exigências que só ela cumpria.", "rotulos": ["denuncia"]}
+{"texto": "Denuncio o uso de veículo oficial para fins particulares. O carro de placa oficial é levado todo fim de semana para a casa de praia do diretor do departamento.", "rotulos": ["denuncia"]}
+{"texto": "Informo que medicamentos do almoxarifado da unidade de saúde estão sendo desviados e revendidos em uma farmácia do bairro por um funcionário do estoque.", "rotulos": ["denuncia"]}
+{"texto": "Há um servidor que cobra propina para adiantar posição na fila de cirurgias eletivas. Já conversou comigo oferecendo o esquema e sei de outras pessoas que pagaram.", "rotulos": ["denuncia"]}
+{"texto": "Relato irregularidade na obra da creche municipal: o material usado é de qualidade inferior ao previsto no contrato e a medição foi atestada como se fosse o especificado.", "rotulos": ["denuncia"]}
+{"texto": "Solicito a poda das árvores da Rua das Acácias. Os galhos encostam na rede elétrica e representam risco de queda sobre os pedestres.", "rotulos": ["solicitacao"]}
+{"texto": "Gostaria de saber qual a documentação necessária para solicitar o benefício de passe livre para pessoa com deficiência e em qual unidade devo protocolar o pedido.", "rotulos": ["solicitacao"]}
+{"texto": "Peço providências quanto à sinalização da esquina da Rua Bahia com a Avenida Central, que não possui faixa de pedestres nem placa de pare.", "rotulos": ["solicitacao"]}
+{"texto": "Preciso de esclarecimento sobre o cálculo do meu IPTU deste ano. O valor venal do imóvel subiu bem acima da inflação e gostaria de entender o critério utilizado.", "rotulos": ["solicitacao"]}
+{"texto": "Solicito a troca da lâmpada do poste em frente ao número 250 da Rua São João, que está queimada e deixa toda a calçada às escuras.", "rotulos": ["solicitacao"]}
+{"texto": "Requeiro cópia do contrato firmado entre o município e a empresa responsável pela manutenção da iluminação pública, com os respectivos aditivos.", "rotulos": ["solicitacao"]}
+{"texto": "Gostaria de informação sobre o prazo para análise do meu pedido de licença ambiental, protocolado no mês passado sob o número 2024-11987.", "rotulos": ["solicitacao"]}
+{"texto": "Peço a limpeza do terreno baldio da Rua dos Ipês, que está com mato alto e vem servindo de criadouro para escorpiões e mosquitos.", "rotulos": ["solicitacao"]}
