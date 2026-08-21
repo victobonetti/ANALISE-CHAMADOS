@@ -1,6 +1,6 @@
 """Métricas de avaliação para a triagem de manifestações.
 
-Acurácia é enganosa neste problema: `solicitacao` e `reclamacao` costumam somar
+Acurácia é enganosa neste problema: `reclamacao` e `duvida` costumam somar
 80% do volume, e um modelo que só as prevê já acerta 80%. Tudo aqui é orientado
 a macro-F1, recall por classe e ao custo assimétrico de perder uma denúncia.
 """

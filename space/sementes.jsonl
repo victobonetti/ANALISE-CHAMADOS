@@ -21,7 +21,7 @@
 {"texto": "Meu protocolo foi aberto há sessenta dias e continua sem qualquer resposta, mesmo com o prazo legal vencido. Já liguei quatro vezes e só me pedem para aguardar.", "rotulos": ["reclamacao"]}
 {"texto": "A merenda servida na escola municipal veio estragada na última terça-feira. Meu filho passou mal e a direção se limitou a dizer que iria verificar.", "rotulos": ["reclamacao"]}
 {"texto": "O atendimento na central telefônica é péssimo. Fico mais de quarenta minutos aguardando e a ligação cai sempre que sou transferido para o setor responsável.", "rotulos": ["reclamacao"]}
-{"texto": "A rua está sem coleta de lixo há duas semanas e o mau cheiro já invadiu as casas. Reclamei na secretaria e disseram apenas que o caminhão está quebrado.", "rotulos": ["reclamacao", "solicitacao"]}
+{"texto": "A rua está sem coleta de lixo há duas semanas e o mau cheiro já invadiu as casas. Reclamei na secretaria e disseram apenas que o caminhão está quebrado.", "rotulos": ["reclamacao"]}
 {"texto": "Venho relatar que o fiscal responsável pela vistoria do meu estabelecimento exigiu pagamento em espécie para liberar o alvará, dizendo que sem isso o processo demoraria meses.", "rotulos": ["denuncia"]}
 {"texto": "Tenho conhecimento de que um servidor da secretaria de obras contrata a própria empresa da esposa para prestar serviços ao município, sem licitação e com notas superfaturadas.", "rotulos": ["denuncia"]}
 {"texto": "Comunico que servidores do setor batem o ponto uns pelos outros e passam a tarde fora da repartição, com a chefia ciente e sem tomar qualquer providência.", "rotulos": ["denuncia"]}
@@ -30,11 +30,11 @@
 {"texto": "Informo que medicamentos do almoxarifado da unidade de saúde estão sendo desviados e revendidos em uma farmácia do bairro por um funcionário do estoque.", "rotulos": ["denuncia"]}
 {"texto": "Há um servidor que cobra propina para adiantar posição na fila de cirurgias eletivas. Já conversou comigo oferecendo o esquema e sei de outras pessoas que pagaram.", "rotulos": ["denuncia"]}
 {"texto": "Relato irregularidade na obra da creche municipal: o material usado é de qualidade inferior ao previsto no contrato e a medição foi atestada como se fosse o especificado.", "rotulos": ["denuncia"]}
-{"texto": "Solicito a poda das árvores da Rua das Acácias. Os galhos encostam na rede elétrica e representam risco de queda sobre os pedestres.", "rotulos": ["solicitacao"]}
-{"texto": "Gostaria de saber qual a documentação necessária para solicitar o benefício de passe livre para pessoa com deficiência e em qual unidade devo protocolar o pedido.", "rotulos": ["solicitacao"]}
-{"texto": "Peço providências quanto à sinalização da esquina da Rua Bahia com a Avenida Central, que não possui faixa de pedestres nem placa de pare.", "rotulos": ["solicitacao"]}
-{"texto": "Preciso de esclarecimento sobre o cálculo do meu IPTU deste ano. O valor venal do imóvel subiu bem acima da inflação e gostaria de entender o critério utilizado.", "rotulos": ["solicitacao"]}
-{"texto": "Solicito a troca da lâmpada do poste em frente ao número 250 da Rua São João, que está queimada e deixa toda a calçada às escuras.", "rotulos": ["solicitacao"]}
-{"texto": "Requeiro cópia do contrato firmado entre o município e a empresa responsável pela manutenção da iluminação pública, com os respectivos aditivos.", "rotulos": ["solicitacao"]}
-{"texto": "Gostaria de informação sobre o prazo para análise do meu pedido de licença ambiental, protocolado no mês passado sob o número 2024-11987.", "rotulos": ["solicitacao"]}
-{"texto": "Peço a limpeza do terreno baldio da Rua dos Ipês, que está com mato alto e vem servindo de criadouro para escorpiões e mosquitos.", "rotulos": ["solicitacao"]}
+{"texto": "Gostaria de saber qual a documentação necessária para solicitar o benefício de passe livre para pessoa com deficiência e em qual unidade devo protocolar o pedido.", "rotulos": ["duvida"]}
+{"texto": "Preciso de esclarecimento sobre o cálculo do meu IPTU deste ano. O valor venal do imóvel subiu bem acima da inflação e gostaria de entender o critério utilizado.", "rotulos": ["duvida"]}
+{"texto": "Gostaria de informação sobre o prazo para análise do meu pedido de licença ambiental, protocolado no mês passado sob o número 2024-11987.", "rotulos": ["duvida"]}
+{"texto": "Qual o horário de funcionamento do posto de atendimento do centro e se é necessário agendamento prévio para emissão de segunda via de certidão?", "rotulos": ["duvida"]}
+{"texto": "Como funciona a ordem da fila de vagas em creche municipal? Gostaria de entender quais critérios definem a posição da minha filha na lista de espera.", "rotulos": ["duvida"]}
+{"texto": "É possível fazer a transferência de titularidade do imóvel pelo portal, ou o procedimento só pode ser feito presencialmente na secretaria de finanças?", "rotulos": ["duvida"]}
+{"texto": "Qual secretaria é responsável pela manutenção das ciclovias? Não consegui identificar no organograma do site a quem devo dirigir esse tipo de pedido.", "rotulos": ["duvida"]}
+{"texto": "O comprovante de inscrição emitido pelo sistema vale como documento para apresentar no dia da prova, ou preciso retirar uma via impressa em alguma unidade?", "rotulos": ["duvida"]}

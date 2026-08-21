@@ -1,8 +1,10 @@
 # Rubrica de anotação — manifestações de ouvidoria
 
-Base legal: Lei 13.460/2017, art. 2º. Esta rubrica é o contrato entre os
-anotadores. Sem ela, dois anotadores discordam em cerca de um terço dos casos
-de fronteira e o modelo aprende o ruído.
+Esta rubrica é o contrato entre os anotadores. Sem ela, dois anotadores
+discordam em cerca de um terço dos casos de fronteira e o modelo aprende o
+ruído.
+
+Classes: `reclamacao`, `elogio`, `duvida`, `denuncia`, `sugestao`.
 
 ## Procedimento
 
@@ -12,15 +14,40 @@ Para cada manifestação, responda **nesta ordem** e pare na primeira que for si
    parte da administração ou de quem age em seu nome?** → `denuncia`
 2. **Expressa insatisfação com serviço, produto ou atendimento que não ocorreu
    como esperado?** → `reclamacao`
-3. **Pede uma providência concreta ou um esclarecimento?** → `solicitacao`
-4. **Propõe uma melhoria para um processo, serviço ou estrutura?** → `sugestao`
+3. **Propõe uma melhoria para um processo, serviço ou estrutura?** → `sugestao`
+4. **Pede um esclarecimento sobre como algo funciona, qual o procedimento ou
+   qual o andamento?** → `duvida`
 5. **Reconhece um bom atendimento, serviço de qualidade ou conduta exemplar?**
    → `elogio`
 
 Marque **todos** os rótulos aplicáveis, não apenas o primeiro. A classe
-primária é derivada pela ordem de precedência acima (`taxonomia.classe_primaria`).
-A anotação multirrótulo existe porque o texto real quase sempre mistura
-intenções, e forçar rótulo único injeta ruído.
+primária é derivada pela ordem de precedência acima
+(`taxonomia.classe_primaria`). A anotação multirrótulo existe porque o texto
+real quase sempre mistura intenções, e forçar rótulo único injeta ruído.
+
+## Lacuna conhecida: pedidos de providência
+
+A taxonomia não tem classe para o **pedido de providência** — "solicito a poda
+da árvore", "peço a troca da lâmpada do poste", "requeiro a limpeza do terreno
+baldio". Não é dúvida (não se pergunta nada), não é sugestão (não propõe mudar
+como a administração opera, apenas pede que ela faça o que já lhe compete) e
+não é reclamação enquanto não houver insatisfação com algo já ocorrido.
+
+Numa ouvidoria municipal esse é tipicamente o maior volume isolado de entrada.
+Enquanto a lacuna não for decidida, anote esses casos com
+`descartar: true` e o motivo `"pedido de providência"`, para que fiquem fora do
+treino e possam ser recuperados depois.
+
+As três saídas possíveis, quando for hora de decidir:
+
+1. Acrescentar `solicitacao` como sexta classe — cobre o caso sem distorcer as
+   outras cinco.
+2. Absorver em `duvida`, redefinindo-a como "solicitação" no sentido amplo
+   (pedido de providência *ou* de esclarecimento). É reverter para a taxonomia
+   anterior sob outro nome.
+3. Absorver em `reclamacao`, tratando todo pedido como insatisfação implícita.
+   **Não recomendado**: infla a classe mais sensível a prazo e mistura dois
+   fluxos de trabalho distintos.
 
 ## A fronteira crítica: reclamação × denúncia
 
@@ -52,22 +79,32 @@ Casos de fronteira resolvidos:
 primária, e o custo de tratar uma reclamação como denúncia (trabalho extra de
 triagem) é muito menor que o inverso (perda de sigilo e de prazo).
 
-## Reclamação × solicitação
+## Reclamação × dúvida
 
-`solicitacao` é a classe **residual** dos pedidos: só se aplica quando não há
-insatisfação com algo que já ocorreu.
+`duvida` exige que **não haja insatisfação com algo já ocorrido**. A pergunta
+tem de ser o propósito da manifestação, não a queixa disfarçada de pergunta.
 
-- *"Solicito a troca da lâmpada do poste."* → `solicitacao`.
-- *"A lâmpada está queimada há dois meses e ninguém veio trocar, apesar dos
-  três chamados que abri."* → `reclamacao` + `solicitacao`.
+- *"Qual o prazo para análise do meu pedido de licença?"* → `duvida`.
+- *"Já se passaram noventa dias e ninguém analisou meu pedido de licença. Qual
+  o prazo, afinal?"* → `reclamacao`. A pergunta é retórica; o núcleo é a
+  demora.
+- *"Como funciona a fila da creche?"* → `duvida`.
+- *"Minha filha está na fila da creche há dois anos enquanto vizinhas que se
+  inscreveram depois já conseguiram vaga."* → `denuncia` + `reclamacao`, pela
+  alegação de favorecimento.
 
-## Sugestão × solicitação
+## Sugestão × dúvida
 
-- `solicitacao` pede que a administração **execute algo que já lhe compete**.
-- `sugestao` propõe **mudar como ela opera**.
+- `duvida` pergunta **como algo funciona hoje**.
+- `sugestao` propõe **mudar como funciona**.
 
-- *"Peço a poda das árvores da minha rua."* → `solicitacao`.
-- *"Proponho um calendário anual de poda preventiva por bairro."* → `sugestao`.
+- *"O portal permite agendamento aos sábados?"* → `duvida`.
+- *"Proponho que o portal passe a permitir agendamento aos sábados."* →
+  `sugestao`.
+
+Quando o texto faz as duas coisas — *"o portal não permite agendar aos
+sábados? deveria permitir"* — marque ambos; a precedência resolve para
+`sugestao`.
 
 ## Elogio junto de outra coisa
 

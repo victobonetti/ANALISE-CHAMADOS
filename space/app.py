@@ -2,7 +2,7 @@
 
 Duas abas: a tarefa nativa do modelo (preenchimento de máscara) e um
 classificador por protótipos que usa os embeddings do encoder para separar as
-cinco classes da Lei 13.460/2017 sem nenhum fine-tuning.
+cinco classes da triagem de ouvidoria sem nenhum fine-tuning.
 """
 
 import spaces  # precisa vir antes de torch — faz o monkey-patch de torch.cuda
@@ -108,7 +108,7 @@ def _preparar_protótipos() -> None:
 
 @spaces.GPU(duration=90)
 def classificar(texto: str, temperatura: float = 0.05) -> tuple[dict, str]:
-    """Classifica uma manifestação de ouvidoria nas cinco classes da Lei 13.460.
+    """Classifica uma manifestação de ouvidoria em uma das cinco classes.
 
     Baseline por similaridade de protótipos: o encoder Albertina converte o
     texto em um vetor, que é comparado por cosseno ao centroide de cada classe.
@@ -198,7 +198,7 @@ AVISO = """
 EXEMPLOS_CLASSIFICACAO = [
     ["Estou há mais de três horas na fila do posto de saúde com senha marcada para as 8h e ninguém foi chamado."],
     ["O fiscal exigiu pagamento em espécie para liberar o alvará, dizendo que sem isso o processo demoraria meses."],
-    ["Solicito a poda das árvores da Rua das Acácias, cujos galhos encostam na rede elétrica."],
+    ["Qual o horário de funcionamento do posto do centro e se preciso agendar para tirar segunda via de certidão?"],
     ["Parabenizo a enfermeira Marta, que explicou cada etapa do exame com muita paciência."],
     ["Proponho que o portal permita agendamento aos sábados pela manhã para reduzir as filas."],
     ["O servidor não me atendeu porque exigiu um valor por fora para dar andamento ao processo."],

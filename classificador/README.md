@@ -1,7 +1,12 @@
 # Classificador de manifestações de ouvidoria
 
-Triagem automática das cinco espécies de manifestação da Lei 13.460/2017:
-**elogio**, **sugestão**, **reclamação**, **denúncia** e **solicitação**.
+Triagem automática de manifestações de ouvidoria em cinco classes:
+**reclamação**, **elogio**, **dúvida**, **denúncia** e **sugestão**.
+
+A taxonomia é inspirada na Lei 13.460/2017, mas não idêntica: no lugar da
+`solicitação` legal, que engloba pedido de providência *e* de esclarecimento,
+usamos `dúvida`, restrita ao esclarecimento. A lacuna que isso abre está
+documentada em [`data/rubrica.md`](data/rubrica.md).
 
 ## Estrutura
 
@@ -18,16 +23,17 @@ src/avaliacao.py        macro-F1, matriz de confusão, vazamento e curva de abst
 
 ## Decisões de modelagem
 
-**Multirrótulo, não multiclasse.** O texto real mistura intenções — *"reclamo do
-buraco e solicito o reparo"*. A cabeça usa sigmoide por classe; a classe
+**Multirrótulo, não multiclasse.** O texto real mistura intenções — *"o portal
+não permite agendar aos sábados? deveria permitir"*. A cabeça usa sigmoide por
+classe; a classe
 primária é derivada depois pela precedência
-`denúncia > reclamação > solicitação > sugestão > elogio`.
+`denúncia > reclamação > sugestão > dúvida > elogio`.
 
 **Custo assimétrico embutido.** `PESO_CLASSE` dá peso 3 à denúncia na loss.
 Classificar uma denúncia como reclamação suprime o sigilo do denunciante e o
 encaminhamento à corregedoria; o erro inverso apenas gera triagem extra.
 
-**Macro-F1 e vazamento, nunca acurácia.** Solicitação e reclamação dominam o
+**Macro-F1 e vazamento, nunca acurácia.** Reclamação e dúvida dominam o
 volume, então um modelo que só as prevê já acerta a maior parte. O
 `avaliacao.Resultado` reporta `vazamento_denuncia` — a fração de denúncias
 verdadeiras que escapou para outra classe — como métrica de risco. Um modelo
@@ -57,7 +63,7 @@ python src/treino.py --config configs/base.yaml
 Formato do corpus, um objeto JSON por linha:
 
 ```json
-{"id": "2024-11987", "texto": "...", "rotulos": ["reclamacao", "solicitacao"]}
+{"id": "2024-11987", "texto": "...", "rotulos": ["reclamacao", "duvida"]}
 ```
 
 `data/manifestacoes.jsonl` hoje é uma cópia das sementes, apenas para o

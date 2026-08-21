@@ -13,9 +13,8 @@ short_description: Triagem de manifestacoes de ouvidoria com Albertina 1.5B
 # Albertina 1.5B PT-BR — triagem de manifestações de ouvidoria
 
 Demo do encoder [PORTULAN/albertina-1b5-portuguese-ptbr-encoder](https://huggingface.co/PORTULAN/albertina-1b5-portuguese-ptbr-encoder)
-aplicado à classificação das cinco espécies de manifestação previstas na
-Lei 13.460/2017: **elogio**, **sugestão**, **reclamação**, **denúncia** e
-**solicitação**.
+aplicado à triagem de manifestações de ouvidoria em cinco classes:
+**reclamação**, **elogio**, **dúvida**, **denúncia** e **sugestão**.
 
 ## O que este Space demonstra
 

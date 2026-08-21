@@ -8,11 +8,11 @@ checkpoint já treinado, porque o índice do rótulo vira o índice do logit.
 from __future__ import annotations
 
 ROTULOS: tuple[str, ...] = (
-    "elogio",
-    "sugestao",
     "reclamacao",
+    "elogio",
+    "duvida",
     "denuncia",
-    "solicitacao",
+    "sugestao",
 )
 
 ID2ROTULO: dict[int, str] = dict(enumerate(ROTULOS))
@@ -35,21 +35,23 @@ DESCRICOES: dict[str, str] = {
         "Relata uma irregularidade, ilegalidade, ato de corrupção ou conduta "
         "antiética dentro da administração pública."
     ),
-    "solicitacao": (
-        "Pedido de providência ou de esclarecimento que não se enquadra como "
-        "reclamação ou denúncia."
+    "duvida": (
+        "Pedido de esclarecimento sobre um serviço, um procedimento ou o "
+        "andamento de um processo, sem insatisfação com algo já ocorrido."
     ),
 }
 
 # Ordem de precedência para derivar a classe primária quando o texto carrega
-# mais de uma intenção (o caso comum: "reclamo do buraco E solicito o reparo").
+# mais de uma intenção (o caso comum: "reclamo do atraso E pergunto o prazo").
 # Denúncia vem primeiro porque é a única com consequência processual própria:
-# sigilo do denunciante e encaminhamento à corregedoria.
+# sigilo do denunciante e encaminhamento à corregedoria. Dúvida vem quase por
+# último por ser a menos acionável: quem reclama e de passagem pergunta algo
+# está reclamando.
 PRECEDENCIA: tuple[str, ...] = (
     "denuncia",
     "reclamacao",
-    "solicitacao",
     "sugestao",
+    "duvida",
     "elogio",
 )
 
@@ -57,11 +59,11 @@ PRECEDENCIA: tuple[str, ...] = (
 # abstenção por classe. Deixar passar uma denúncia como reclamação é o erro
 # mais caro do sistema; o inverso apenas gera trabalho extra de triagem.
 PESO_CLASSE: dict[str, float] = {
-    "elogio": 1.0,
-    "sugestao": 1.0,
     "reclamacao": 1.0,
+    "elogio": 1.0,
+    "duvida": 1.0,
     "denuncia": 3.0,
-    "solicitacao": 1.0,
+    "sugestao": 1.0,
 }
 
 
